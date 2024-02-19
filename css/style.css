@@ -17,6 +17,9 @@ display: none;
 .nav-item:hover::after{
 display: block;
 }
+.carousel-item img{
+    height:98vh;
+}
 .carousel-caption{
     margin-bottom: 14%;
 }
@@ -161,6 +164,9 @@ transform: scale(0.9);
 @media (max-width: 567px) {
      *{
         font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .carousel-item img{
+        height:75vh;
     }
      .carousel-caption{
         margin-bottom: 30%;
