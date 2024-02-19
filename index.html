@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark position-fixed" style=" position: absolute; z-index: 3; width: 100%;" >
+        <div class="container-fluid">
+          <a class="navbar-brand me-4 logo " ><img src="images/logoo.png" alt="logo" width="100px" height="40px" >
+          </a>
+          <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar" aria-controls="mynavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" ></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar"> 
+            <ul class="navbar-nav me-auto ">    
+              <li class="nav-item ">
+                <a class="nav-link me-4 text-light" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-4 text-light" href="#">Blogs</a>
+              </li>
+              <li class="nav-item dropdown ">
+                <a class="nav-link me-4 dropdown-toggle text-light" href="#"  data-bs-toggle="dropdown">Categories</a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Breakfast Croissant</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">French Bread</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Desserts</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-2 text-light" href="#">About</a>
+              </li>
+            </ul>
+            
+            <form class="d-flex me-2">
+              <input class="form-control me-2 border-light  bg-light " type="text" placeholder="Search" aria-describedby="button">
+              <button class="btn btn-outline-light me-2 " type="button" id="button">Search</button>
+              <a  class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Login</a>             
+            </div>
+            </form>
+          </div>
+        </div>
+      </nav>
+<!-- Modal -->
+      <div class="modal fade "  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true" >
+        <div class="modal-dialog " >
+          <div class="modal-content bg-light " >
+          <div class="modal-header "style=" background-color: rgba(164, 134, 92,.9); " >
+            <h4 class=" modal-title" id="staticBackdropLabel">Login</h4>
+            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="model-body p-3 ">
+            <form action="/action_page.php">
+              <div class="mb-3 mt-3">
+                <label for="email">Email address:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                <p>We'll never share your email with anyone else.</p>
+              </div>
+              <div class="mb-3 ">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+              </div>
+              <div class="form-check form-switch ">
+            <input class="form-check-input " type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+            <label class="form-check-label " for="mySwitch">Remember me</label>
+          </div>
+          <div class="modal-footer">
+            <a type="button" class="btn btn-outline-dark " >Login</a>
+            <a type="button" class="btn btn-outline-dark " data-bs-dismiss="modal">Close</a>
+          </div>
+          </div>
+        </div>
+      </div>
+</div>
+      <div class="position-fixed top-50 end-0 translate-middle-y bg-light bg-opacity-75 " style="z-index: 10; width: 30px;">
+        <ul class="list-unstyled" >
+            <li class="mb-2"><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+            <li class="mb-2"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+            <li class="mb-2"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+            <li class="mb-2"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+    </div>
+<!-- Carousel -->
+<div id="demo" class="carousel slide " data-bs-ride="carousel" style="top:0px; " >
+    <!-- Indicators/dots -->
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+      <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+    </div>
+    <!-- The slideshow/carousel -->
+    <div class="carousel-inner" id="home">
+      <div class="carousel-item active">
+        <img src="images/3.jpg" alt="Chicago" class="d-block" style="width:100%; height:98vh;">
+        <div class="carousel-caption  ">
+          <h1>IT'S MOUSE-WATERING</h1>
+          <p>We have so many types that you expect you should visit us soon.</p>
+          <button type="button" class="btn btn-outline-light">Purchase Now</button>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="images/2.jpg" alt="Los Angeles" class="d-block" style="width:100%; height:98vh;">
+        <div class="carousel-caption " >
+          <h1>WHAT WE OFFER</h1>
+          <p>We had aspecial offers every weekend specially our distinguished customers.</p>
+          <button type="button" class="btn btn-outline-light">Purchase Now</button>
+        </div> 
+      </div>
+      <div class="carousel-item">
+        <img src="images/1.png" alt="New York" class="d-block" style="width:100%; height:98vh;">
+        <div class="carousel-caption  ">
+          <h1>SPECIAL TASTE AND CHIEFS</h1>
+          <p>We have experienced and frindly chiefs</p>
+          <button type="button" class="btn btn-outline-light">Purchase Now</button>
+        </div>  
+      </div>
+    </div>
+    <!-- Left and right controls/icons -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+</div>
+<div class="card">
+  <img src="images/side.png" class=" img-card position-absolute top-50 start translate-middle-y" width="150px" height="130px" style="opacity:0.8 ;" >
+  <div class="card-body mb-2">
+    
+    <h4 class="card-title">The Recipe to happiness</h4>
+    <p class="card-text">if you want to know more about our products, you can take alook about our menu.</p>
+    <img src="images/card.png" class=" img-card im2 position-absolute top-50  translate-middle-y" width="300px" height="130px" >
+    <a href="#" class="btn btn-outline-dark">See Menu</a>
+  </div>
+</div>
+
+<blockquote class="blockquote mb-2 block" >
+  <h5>The services that we offer</h5>
+</blockquote>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header " id="flush-headingOne">
+      <button class="accordion-button collapsed " style=" color: rgb(155, 118, 27);" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Menu Items
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+            <div class="row">
+                <div class="col">
+                  Pastries:
+                  <ul class="unordered">
+                    <li>Croissants</li><li>Danishes</li><li>Scones</li><li>Muffins</li></ul>
+                </div>
+                <div class="col">                 
+                  Chef's Specials:
+                  <ul class="unordered">
+                    <li>Lemon Blueberry Tart</li><li>Salted Caramel Brownies</li><li>Raspberry Macarons</li></ul>
+                </div>
+              </div>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" style=" color: rgb(155, 118, 27);" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Ordering and Delivery Options
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+        <div class="row">
+          <div class="col">
+          Ordering Process:
+        <ul class="unordered">
+          <li>Select Items from Menu.</li>
+          <li>Add to Cart.</li>
+          <li> Proceed to Checkout. </li></ul>
+          </div>
+          <div class="col">  
+          Delivery Options: 
+        <ul class="unordered">
+        <li>Local Delivery>> Free for Orders Over $50</li>
+        <li>Nationwide Shipping>> Flat Rate of $10</li>
+        <li> Pickup>> Available During Business Hours.</li></ul>
+      </div>
+    </div>
+</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" style=" color: rgb(155, 118, 27);" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Testimonials and Reviews
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">
+      <ul class="unordered"><li> Best croissants in town! - <code>"John D"</code>. </li>
+      <li> Absolutely delicious cakes! - <code>"Sarah L"</code>. </li>
+      <li>Friendly staff and great service! - <code>"Emily W"</code>.</li></ul>
+    </div>
+    </div>
+  </div>
+</div>
+
+<div class="content" >
+    <div class=" p-3">
+    <h5>you can register your review if you liked <i class="fa-brands fa-gratipay"></i></h5>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Enter your message"></textarea>
+    <button class="btn btn-outline-light mt-2" type="button" data-bs-toggle="modal" data-bs-target="#thankYouModal">Send</button>
+  </div></div>
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+<div class="modal-body">
+  Your review has been received. We appreciate your feedback  <i class="fa-brands fa-gratipay"></i> .</div>
+</div></div></div></div>
+
+<div class="imgg" height="100px"></div>
+
+<div class="container">
+  <figure class="text-center">
+    <blockquote class="blockquote block2 p-3">
+      <h4>OUR POPULAR ITEMS</h4>
+    </blockquote>
+  </figure>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 ">
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/cinnamon-roll.png" class="card-img-top" alt="cinnamon-roll" height="200px" draggable="false">
+        <div class="card-body ">
+          <h5 class="card-title">Cinnamon roll</h5>
+          <p class="card-text">tender texture and aromatic cinnamon flavor make it a delightful indulgence for pastry lovers.</p>
+          <a href="#" class="btn btn-outline-dark ">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/chocolat-danish-pastry-.png" class="card-img-top" alt="chocolat-danish-pastry-" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">Chocolat danish pastry</h5>
+          <p class="card-text">enjoyed as a breakfast pastry with a cup of coffee or as a sweet snack throughout the day. </p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/chocolat-danish-pastry-croissant.png" class="card-img-top" alt="chocolat croissant" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">chocolat croissant</h5>
+          <p class="card-text">light and airy pastry that pairs perfectly with the decadent chocolate filling.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd ">
+        <img src="images/Cheese croissant.png" class="card-img-top" alt="Cheese croissant" height="200px" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">Cheese croissant</h5>
+          <p class="card-text"> a delectable pastry that combines the flakiness of a croissant with the savory richness of cheese.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 mt-2">
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/potato-bread.png" class="card-img-top" alt="potato-bread" height="200px" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">Potato bread</h5>
+          <p class="card-text">potato bread with white wheat and oats.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/brownie-chocolate-cookies.png" class="card-img-top" alt="..." height="200px" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">chocolate cookies</h5>
+          <p class="card-text">Brownie chocolate cookies freshly baked.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd  mb-3">
+        <img src="images/baguette.png" class="card-img-top" alt="baguette" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">Baguette</h5>
+          <p class="card-text">baguette french bread wheat flour crispy bread thin bread.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card border-light cardd  mb-3" >
+        <img src="images/heart.png" class="card-img-top" alt="croissant" height="200px" draggable="false">
+        <div class="card-body">
+          <h5 class="card-title">Heart croissant</h5>
+          <p class="card-text">popular and delicious heart shaped croissant.</p>
+          <a href="#" class="btn btn-outline-dark">Shop Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<blockquote class="blockquote mb-2 block mt-4" >
+  <h5>Thank for our chief's</h5>
+</blockquote>
+  <div class="container mt-5 ">
+    <div class="row ">
+      <div class="col-md-4 mb-4" >
+        <div class="card card2">
+          <img src="images/chief1.png" class="card-img rounded-top" alt="..." height="500px">
+          <div class="card-img-overlay d-flex flex-column justify-content-between">
+            <div class="text1">
+            <h5 class="card-title text-white">ALL thanks and appreciation</h5>
+            <p class="card-text text-white"><i class="fa-regular fa-clock"></i> October 15,2020</p></div>
+            <div class="text2">
+              <img src="images/chief1.png" class="rounded-circle bg-light" alt="Cinque Terre" height="170" width="150">
+              <h6 class="card-title text-white mt-2">Chef Sophie Pâtissière</h6>
+              <p class="card-text text-white">Pastry Chef</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  mb-4" >
+        <div class="card card2">
+          <img src="images/chief3.png" class="card-img rounded-top" alt="..." height="500px">
+          <div class="card-img-overlay d-flex flex-column justify-content-between">
+            <div class="text1">
+            <h5 class="card-title text-white">ALL thanks and appreciation</h5>
+            <p class="card-text text-white"><i class="fa-regular fa-clock"></i> March 5,2015</p></div>
+            <div class="text2">
+              <img src="images/chief3.png" class="rounded-circle bg-light" alt="Cinque Terre" height="170" width="150">
+              <h6 class="card-title text-white mt-2">Chef André Boulanger </h6>
+              <p class="card-text text-white">Head Baker</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4  mb-4" >
+        <div class="card card2">
+          <img src="images/chief2.png" class="card-img rounded-top" alt="..." height="500px">
+          <div class="card-img-overlay d-flex flex-column justify-content-between">
+            <div class="text1">
+            <h5 class="card-title text-white">ALL thanks and appreciation</h5>
+            <p class="card-text text-white"><i class="fa-regular fa-clock"></i> July 18,2019</p></div>
+            <div class="text2">
+              <img src="images/chief2.png" class="rounded-circle bg-light" alt="Cinque Terre" height="170" width="150">
+              <h6 class="card-title text-white mt-2">Chef Isabelle Tartine</h6>
+              <p class="card-text text-white">Tart Connoisseur</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+ </div>
+
+ <div class="container mt-4 " >
+  <figure class="text-center">
+    <blockquote class="blockquote block2  ">
+      <h4>OUR CATECORIES</h4>
+    </blockquote></figure>
+    <div class="row p-3">
+        <div class="card card3" >
+          <div class="row  ">
+            <div class="col-md-4 p-0 " style="overflow: hidden;">
+              <img src="images/bakeryproducts.jpg" class="img-fluid rounded-start img-flu" alt="..." >
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Oats Pastry</h5><hr>
+                <p class="card-text">Oats pastry blends the goodness of oats with the indulgence of pastry. Made from oats, flour, butter, and sugar, it offers a nutty flavor and buttery richness. Enjoy it for breakfast or as a sweet snack, it promises a satisfying experience with its flaky crust and tender texture.</p>                
+                <div class="btn-group btn-group-sm" role="group" style="margin-top: 50px;" ><a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-regular fa-eye"></i> See Species</a> 
+                  <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-location-dot"></i> Location</a> <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-play"></i> Play Episodic</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>        
+      </div>
+      <div class="row p-3">
+        <div class="card card3">
+          <div class="row">
+            <div class="col-md-4 p-0 img2 order-md-last" style="overflow: hidden;">
+              <img src="images/bakeryproducts2.jpg" class="img-fluid round-end img-flu" alt="...">
+            </div>
+            <div class="col-md-8 order-md-first">
+              <div class="card-body">
+                <h5 class="card-title"> Appetizers</h5><hr>
+                <p class="card-text"> Appetizers, also known as starters, are small dishes served before the main course. They awaken the palate and prepare diners for the meal ahead. With a variety of flavors and textures, they complement the overall dining experience.</p>
+                <div class="btn-group btn-group-sm" role="group" style="margin-top: 50px;" ><a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-regular fa-eye"></i> See Species</a> 
+                  <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-location-dot"></i> Location</a>  <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-play"></i> Play Episodic</a>
+                </div> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row p-3">
+        <div class="card card3" >
+          <div class="row ">
+            <div class="col-md-4 p-0" style="overflow: hidden;">
+              <img src="images/bakeryproducts3.jpg" class="img-fluid rounded-start img-flu" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Breakfast Pastry</h5><hr>
+                <p class="card-text">Breakfast pastries are a delightful morning treat enjoyed worldwide, offering a convenient and satisfying start to the day with their flaky layers, buttery textures, and sweet or savory fillings.</p>
+                <div class="btn-group btn-group-sm" role="group" style="margin-top: 110px;" ><a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-regular fa-eye"></i> See Species</a> 
+                  <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-location-dot"></i> Location</a>  <a href="#" type="button" class="btn btn-outline-dark btn-sm"><i class="fa-solid fa-play"></i> Play Episodic</a>
+                </div></div>
+            </div>
+          </div>
+        </div>        
+      </div>
+ </div>
+
+ <div class="container mt-4">
+  <figure class="text-center">
+    <blockquote class="blockquote block2 p-2">
+      <h4>JOIN US</h4>
+    </blockquote></figure>
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-3">
+      <div class="col">
+        <div class="card card4" >
+          <div class="card-body text-center">
+            <a href="#" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go To Link"><h4>Contact Us</h4></a>
+            <img src="images/whatsapp-icon.png" class="img-fluid" alt="whatsapp-icon" draggable="false" width="90px" height="100px">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card4 ">
+          <div class="card-body text-center">
+            <a href="#" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go To Link"><h4>Visit Our Page</h4></a>
+            <img src="images/facebook-icon.png" class="img-fluid" alt="facebook-icon" draggable="false" width="90px" height="100px">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card4">
+          <div class="card-body text-center">
+            <a href="#" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go To Link"><h4>Follow Us</h4></a>
+            <img src="images/instagram-icon.png" class="img-fluid" alt="instagram-icon" draggable="false" width="90px" height="100px">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card card4">
+          <div class="card-body text-center">
+            <a href="#" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="top" title="Go To Link"><h4>Visit Us</h4></a>
+            <img src="images/twitter-icon.png" class="img-fluid" alt="twitter-icon" draggable="false" width="90px" height="100px">
+          </div>
+        </div>
+      </div>
+    </div>
+    
+</div>
+
+<footer class="footer mt-5 text-dark">
+  <div class="container p-4">
+    <section>
+      <div class="row">
+        <div class="col-md-6 col-lg-4 col-xl-3 me-5">
+          <img src="images/logoo.png" alt="logo" width="100px" height="40px" class="logo mb-3">
+          <p>Recieve updates and Latest news direct from simply enter</p>
+          <strong>+564 7885 3222</strong><br>
+          <p>your email @ gmail.com</p>
+        </div>
+        <div class="col-md-6 col-lg-4 col-xl-3 me-5  ">
+          <h6 class="text-uppercase mb-4 font-weight-bold">QUICK LINK</h6>
+          <ul class=" unordered">
+            <li>Home </li> 
+            <li>Categories </li>
+            <li> About</li>
+          </ul>
+        </div>
+        <div class="col-md-12 col-lg-4 col-xl-3 ">
+          <h6 class="text-uppercase mb-4 font-weight-bold">NEWSLETTER</h6>
+          <p>Subscribe now to get daily updates</p>
+          <div class="input-group mb-3">
+            <input type="email" id="form5Example2" class="form-control" placeholder="Enter your E-mail">
+            <button class="btn btn-outline-light" type="button">Send</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <hr class="my-4">
+    <section>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="text-center text-md-start">
+            <p class="mb-0">Copyright © 2024 All rights reserved | This template is made with
+              <svg xmlns="http://www.w3.org/2000/svg" fill="white"  width="16" height="16" fill="currentColor" class="bi bi-balloon-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8.49 10.92C19.412 3.382 11.28-2.387 8 .986 4.719-2.387-3.413 3.382 7.51 10.92l-.234.468a.25.25 0 1 0 .448.224l.04-.08c.009.17.024.315.051.45.068.344.208.622.448 1.102l.013.028c.212.422.182.85.05 1.246-.135.402-.366.751-.534 1.003a.25.25 0 0 0 .416.278l.004-.007c.166-.248.431-.646.588-1.115.16-.479.212-1.051-.076-1.629-.258-.515-.365-.732-.419-1.004a2.376 2.376 0 0 1-.037-.289l.008.017a.25.25 0 1 0 .448-.224l-.235-.468ZM6.726 1.269c-1.167-.61-2.8-.142-3.454 1.135-.237.463-.36 1.08-.202 1.85.055.27.467.197.527-.071.285-1.256 1.177-2.462 2.989-2.528.234-.008.348-.278.14-.386Z"/>
+              </svg> by <a href="#" class="text-dark">color lip.</a>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="text-center text-md-end">
+            <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</footer>
+
+
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
